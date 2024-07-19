@@ -43,6 +43,37 @@ header {
   margin: 10px 0 0;
 }
 
+nav {
+  background: var(--secondary-color);
+  color: #fff;
+  padding: 10px 0;
+  position: relative;
+}
+
+nav ul {
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px; /* Increased margin for better spacing */
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem; /* Slightly larger font size for better visibility */
+  font-weight: bold; /* Make text bold for better readability */
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: var(--accent-color);
+}
+
 .contact-links a {
   color: #fff;
   text-decoration: none;
@@ -55,34 +86,6 @@ header {
 .contact-links a:hover {
   border: 2px solid #fff;
   border-radius: 5px;
-}
-
-nav {
-  background: var(--secondary-color);
-  color: #fff;
-  padding: 10px 0;
-}
-
-nav ul {
-  padding: 0;
-  list-style: none;
-  text-align: center;
-}
-
-nav ul li {
-  display: inline;
-  margin: 0 10px;
-}
-
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.1rem;
-  transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-  color: var(--accent-color);
 }
 
 section {
@@ -187,4 +190,3 @@ button:hover, .contact-links a:hover {
   0% { opacity: 0; }
   100% { opacity: 1; }
 }
-
