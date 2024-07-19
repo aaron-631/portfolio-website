@@ -4,8 +4,8 @@ body {
   line-height: 1.6;
   margin: 0;
   padding: 0;
-  background: #f4f4f4;
-  color: #333;
+  background: #F0F0F0;
+  color: #333333;
 }
 
 .container {
@@ -15,11 +15,11 @@ body {
 }
 
 header {
-  background: #333;
-  color: #fff;
+  background: #003366;
+  color: #FFFFFF;
   padding-top: 30px;
   min-height: 70px;
-  border-bottom: #0779e4 3px solid;
+  border-bottom: #FF6600 3px solid;
 }
 
 header .container {
@@ -37,19 +37,19 @@ header p {
 }
 
 .contact-links a {
-  color: #fff;
+  color: #FFFFFF;
   text-decoration: none;
   margin-right: 10px;
   font-size: 1.2em;
 }
 
 .contact-links a:hover {
-  color: #0779e4;
+  color: #FF6600;
 }
 
 nav {
-  background: #0779e4;
-  color: #fff;
+  background: #006699;
+  color: #FFFFFF;
   padding: 15px 0;
 }
 
@@ -65,17 +65,17 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #fff;
+  color: #FFFFFF;
   text-decoration: none;
 }
 
 nav ul li a:hover {
-  color: #333;
+  color: #FF6600;
 }
 
 section {
   padding: 20px 0;
-  border-bottom: #ccc 1px solid;
+  border-bottom: #CCCCCC 1px solid;
 }
 
 section:last-child {
@@ -87,8 +87,8 @@ h2 {
 }
 
 footer {
-  background: #333;
-  color: #fff;
+  background: #003366;
+  color: #FFFFFF;
   text-align: center;
   padding: 10px 0;
   margin-top: 20px;
@@ -97,15 +97,15 @@ footer {
 /* Navigation toggle button */
 .nav-toggle {
   display: none;
-  background: #0779e4;
-  color: #fff;
+  background: #006699;
+  color: #FFFFFF;
   padding: 10px;
   border: none;
   cursor: pointer;
 }
 
 .nav-toggle:hover {
-  background: #0559b2;
+  background: #003366;
 }
 
 @media (max-width: 768px) {
@@ -130,12 +130,12 @@ footer {
 
 /* Hover effect */
 a.hover, button.hover {
-  color: #fff !important;
-  background-color: #0779e4 !important;
+  color: #FFFFFF !important;
+  background-color: #006699 !important;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 a.hover:hover, button.hover:hover {
-  background-color: #0559b2 !important;
-  color: #fff !important;
+  background-color: #003366 !important;
+  color: #FFFFFF !important;
 }
