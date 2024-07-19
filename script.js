@@ -32,3 +32,13 @@ document.querySelectorAll('nav a').forEach(link => {
     nav.classList.remove('open');
   });
 });
+
+// Add hover effects on buttons and links
+document.querySelectorAll('a, button').forEach(element => {
+  element.addEventListener('mouseover', () => {
+    element.classList.add('hover');
+  });
+  element.addEventListener('mouseout', () => {
+    element.classList.remove('hover');
+  });
+});
