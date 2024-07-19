@@ -8,7 +8,7 @@ document.querySelectorAll('nav a').forEach(anchor => {
 
     if (targetElement) {
       window.scrollTo({
-        top: targetElement.offsetTop,
+        top: targetElement.offsetTop - 50, // Adjusted for fixed header
         behavior: 'smooth'
       });
     }
@@ -17,10 +17,7 @@ document.querySelectorAll('nav a').forEach(anchor => {
 
 // Toggle mobile navigation menu
 const nav = document.getElementById('nav');
-const toggleButton = document.createElement('button');
-toggleButton.innerHTML = '☰';
-toggleButton.classList.add('nav-toggle');
-document.body.insertBefore(toggleButton, nav);
+const toggleButton = document.querySelector('.nav-toggle');
 
 toggleButton.addEventListener('click', () => {
   nav.classList.toggle('open');
