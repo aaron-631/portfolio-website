@@ -1,4 +1,3 @@
-
 'use strict';
 
 // Utility function to toggle class
@@ -22,7 +21,7 @@ const modalText = document.querySelector('[data-modal-text]');
 const openModal = item => {
   modalImg.src = item.querySelector('[data-testimonials-avatar]').src;
   modalImg.alt = item.querySelector('[data-testimonials-avatar]').alt;
-  modalTitle.textContent = item.querySelector('[data-testimonials-title]').textContent;
+  modalTitle.textContent = item.querySelector('[data-testimonials-name]').textContent;
   modalText.textContent = item.querySelector('[data-testimonials-text]').textContent;
   toggleClass(modalContainer, 'active');
   toggleClass(overlay, 'active');
@@ -44,7 +43,7 @@ overlay.addEventListener('click', () => {
 // Custom select functionality
 const select = document.querySelector('[data-select]');
 const selectItems = document.querySelectorAll('[data-select-item]');
-const selectValue = document.querySelector('[data-selecct-value]');
+const selectValue = document.querySelector('[data-select-value]');
 const filterBtns = document.querySelectorAll('[data-filter-btn]');
 const filterItems = document.querySelectorAll('[data-filter-item]');
 
@@ -96,10 +95,11 @@ navigationLinks.forEach(link => {
     const targetPage = link.getAttribute('href').substring(1);
     pages.forEach(page => {
       page.classList.toggle('active', page.id === targetPage);
-      navigationLinks.forEach(navLink => {
-        navLink.classList.toggle('active', navLink === link);
-      });
+    });
+    navigationLinks.forEach(navLink => {
+      navLink.classList.toggle('active', navLink === link);
     });
     window.scrollTo(0, 0);
   });
 });
+```
