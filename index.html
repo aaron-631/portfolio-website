@@ -5,17 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aaron Chakraborty's Portfolio</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="styles.css">
   <style>
     body {
       font-family: 'Arial', sans-serif;
       margin: 0;
       padding: 0;
-      background: #f8f9fa;
-      color: #212529;
+      background: #f0f2f5;
+      color: #333;
     }
     header {
-      background: #343a40;
+      background: #1c1e21;
       color: #fff;
       padding: 20px 0;
       position: fixed;
@@ -23,6 +22,7 @@
       top: 0;
       left: 0;
       z-index: 1000;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
     .container {
       width: 90%;
@@ -42,7 +42,6 @@
     .header-content p {
       margin: 0;
       font-size: 1.2em;
-      font-family: 'Roboto', sans-serif;
     }
     .contact-links a {
       color: #fff;
@@ -51,7 +50,7 @@
       font-size: 1.2em;
     }
     nav {
-      background: #495057;
+      background: #333;
       color: #fff;
       padding: 10px 0;
       position: fixed;
@@ -65,8 +64,11 @@
       padding: 0;
       margin: 0;
       display: flex;
-      justify-content: space-around;
+      justify-content: center;
       flex-wrap: wrap;
+    }
+    nav li {
+      margin: 0;
     }
     nav a {
       color: #fff;
@@ -77,24 +79,24 @@
       transition: background 0.3s, color 0.3s;
     }
     nav a:hover {
-      background: #6c757d;
+      background: #555;
       border-radius: 5px;
-      color: #f8f9fa;
     }
     main {
-      padding-top: 140px;
+      padding-top: 160px;
     }
     .page {
-      padding: 60px 0;
+      padding: 80px 0;
       background: #ffffff;
-      border-bottom: 2px solid #dee2e6;
+      border-bottom: 2px solid #e0e0e0;
       position: relative;
     }
     .page h2 {
-      font-size: 2.2em;
+      font-size: 2.5em;
       margin-bottom: 20px;
-      color: #343a40;
+      color: #1c1e21;
       font-family: 'Roboto', sans-serif;
+      text-align: center;
     }
     ul {
       padding: 0;
@@ -102,7 +104,7 @@
     }
     ul li {
       margin-bottom: 15px;
-      font-size: 1.1em;
+      font-size: 1.2em;
     }
     .modal-container {
       display: none;
@@ -113,7 +115,7 @@
       height: 100%;
       justify-content: center;
       align-items: center;
-      background: rgba(0, 0, 0, 0.8);
+      background: rgba(0, 0, 0, 0.7);
       z-index: 2000;
     }
     .modal {
@@ -138,22 +140,22 @@
       position: absolute;
       top: 15px;
       right: 15px;
-      color: #343a40;
+      color: #1c1e21;
     }
     footer {
-      background: #343a40;
+      background: #1c1e21;
       color: #fff;
       padding: 20px 0;
       text-align: center;
-      border-top: 2px solid #495057;
+      border-top: 2px solid #333;
     }
     .testimonial {
       margin: 20px 0;
       padding: 20px;
-      border: 1px solid #dee2e6;
+      border: 1px solid #e0e0e0;
       border-radius: 10px;
       background: #ffffff;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
     .testimonial-avatar {
       width: 80px;
@@ -164,22 +166,24 @@
     .testimonial-name {
       margin: 0;
       font-size: 1.2em;
-      color: #495057;
+      color: #1c1e21;
+      text-align: center;
     }
     .testimonial-text {
       margin: 0;
       font-size: 1.1em;
-      color: #495057;
+      color: #1c1e21;
+      text-align: center;
     }
     .section-header {
       font-size: 2.5em;
       margin-bottom: 30px;
-      color: #343a40;
+      color: #1c1e21;
       font-family: 'Roboto', sans-serif;
     }
     .cta-button {
       display: inline-block;
-      padding: 10px 20px;
+      padding: 12px 25px;
       background: #007bff;
       color: #fff;
       text-decoration: none;
@@ -194,7 +198,6 @@
   </style>
 </head>
 <body>
-  <!-- Header -->
   <header>
     <div class="container">
       <div class="header-content">
@@ -208,7 +211,6 @@
     </div>
   </header>
 
-  <!-- Navigation -->
   <nav>
     <div class="container">
       <ul id="nav">
@@ -224,13 +226,10 @@
         <li><a href="#posts" data-nav-link>Posts</a></li>
         <li><a href="#contact" data-nav-link>Contact</a></li>
       </ul>
-      <button class="nav-toggle">☰</button>
     </div>
   </nav>
 
-  <!-- Main content -->
   <main>
-    <!-- About Me Section -->
     <section id="about" data-page class="page">
       <div class="container">
         <h2 class="section-header">About Me</h2>
@@ -239,7 +238,6 @@
       </div>
     </section>
 
-    <!-- Skills Section -->
     <section id="skills" data-page class="page">
       <div class="container">
         <h2 class="section-header">Technical Skills</h2>
@@ -251,11 +249,10 @@
       </div>
     </section>
 
-    <!-- Certifications Section -->
-    <section id="certifications" data-page class="page
+    <section id="certifications" data-page class="page">
+     
 
-">
-      <div class="container">
+ <div class="container">
         <h2 class="section-header">Certifications</h2>
         <ul>
           <li><strong>CertiProf Certified Ethical Hacker (CEH)</strong> - CertiProf</li>
@@ -265,7 +262,6 @@
       </div>
     </section>
 
-    <!-- Experience Section -->
     <section id="experience" data-page class="page">
       <div class="container">
         <h2 class="section-header">Experience</h2>
@@ -276,7 +272,6 @@
       </div>
     </section>
 
-    <!-- Education Section -->
     <section id="education" data-page class="page">
       <div class="container">
         <h2 class="section-header">Education</h2>
@@ -288,7 +283,6 @@
       </div>
     </section>
 
-    <!-- Courses Section -->
     <section id="courses" data-page class="page">
       <div class="container">
         <h2 class="section-header">Courses</h2>
@@ -298,7 +292,6 @@
       </div>
     </section>
 
-    <!-- Achievements Section -->
     <section id="achievements" data-page class="page">
       <div class="container">
         <h2 class="section-header">Achievements and Awards</h2>
@@ -310,7 +303,6 @@
       </div>
     </section>
 
-    <!-- Languages Section -->
     <section id="languages" data-page class="page">
       <div class="container">
         <h2 class="section-header">Languages</h2>
@@ -324,7 +316,6 @@
       </div>
     </section>
 
-    <!-- Volunteering Section -->
     <section id="volunteering" data-page class="page">
       <div class="container">
         <h2 class="section-header">Volunteering</h2>
@@ -332,7 +323,6 @@
       </div>
     </section>
 
-    <!-- Posts Section -->
     <section id="posts" data-page class="page">
       <div class="container">
         <h2 class="section-header">Posts</h2>
@@ -344,7 +334,6 @@
       </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" data-page class="page">
       <div class="container">
         <h2 class="section-header">Contact</h2>
@@ -355,7 +344,6 @@
     </section>
   </main>
 
-  <!-- Testimonials Section -->
   <section id="testimonials" data-page class="page">
     <div class="container">
       <h2 class="section-header">Testimonials</h2>
@@ -364,29 +352,13 @@
         <h3 class="testimonial-name">John Doe</h3>
         <p class="testimonial-text">"Great service!"</p>
       </div>
-      <!-- More testimonials -->
     </div>
   </section>
 
-  <!-- Modal -->
-  <div class="modal-container" data-modal-container>
-    <div class="overlay" data-overlay></div>
-    <div class="modal">
-      <button class="modal-close-btn" data-modal-close-btn>×</button>
-      <img src="" alt="" class="modal-img" data-modal-img>
-      <h3 class="modal-title" data-modal-title></h3>
-      <p class="modal-text" data-modal-text></p>
-    </div>
-  </div>
-
-  <!-- Footer -->
   <footer>
     <div class="container">
-      <p>&copy; 2024 Aaron Chakraborty</p>
+      <p>&copy; 2024 Aaron Chakraborty. All rights reserved.</p>
     </div>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
-
