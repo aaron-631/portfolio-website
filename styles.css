@@ -1,22 +1,11 @@
-/* Use CSS variables for easier maintenance */
-:root {
-  --primary-color: #333;
-  --secondary-color: #444;
-  --accent-color: #ff9900;
-  --background-color: #f4f4f4;
-  --text-color: #333;
-  --header-font: 'Arial', sans-serif;
-  --body-font: 'Arial', sans-serif;
-}
-
-/* Global styles */
+/* Base styles */
 body {
-  font-family: var(--body-font);
+  font-family: Arial, sans-serif;
   line-height: 1.6;
   margin: 0;
   padding: 0;
-  background-color: var(--background-color);
-  color: var(--text-color);
+  background: #f4f4f4;
+  color: #333;
 }
 
 .container {
@@ -26,127 +15,100 @@ body {
 }
 
 header {
-  background: var(--primary-color);
+  background: #333;
   color: #fff;
-  padding: 20px 0;
-  text-align: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding-top: 30px;
+  min-height: 70px;
+  border-bottom: #0779e4 3px solid;
 }
 
-.header-content h1 {
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
   margin: 0;
-  font-size: 2.5rem;
-  text-transform: uppercase;
 }
 
-.header-content p {
-  margin: 10px 0 0;
+header p {
+  margin: 0;
+}
+
+.contact-links a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 10px;
+  font-size: 1.2em;
+}
+
+.contact-links a:hover {
+  color: #0779e4;
 }
 
 nav {
-  background: var(--secondary-color);
+  background: #0779e4;
   color: #fff;
-  padding: 10px 0;
-  position: relative;
+  padding: 15px 0;
 }
 
 nav ul {
   padding: 0;
   list-style: none;
   text-align: center;
-  margin: 0;
 }
 
 nav ul li {
   display: inline;
-  margin: 0 15px; /* Increased margin for better spacing */
+  margin: 0 10px;
 }
 
 nav ul li a {
   color: #fff;
   text-decoration: none;
-  font-size: 1.2rem; /* Slightly larger font size for better visibility */
-  font-weight: bold; /* Make text bold for better readability */
-  transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-  color: var(--accent-color);
-}
-
-.contact-links a {
-  color: #fff;
-  text-decoration: none;
-  margin: 0 10px;
-  border: 2px solid transparent;
-  padding: 5px 10px;
-  transition: all 0.3s ease;
-}
-
-.contact-links a:hover {
-  border: 2px solid #fff;
-  border-radius: 5px;
+  color: #333;
 }
 
 section {
-  padding: 40px 0;
-  border-bottom: 1px solid #e4e4e4;
-  background-color: var(--background-color);
-  animation: fadeIn 0.5s ease-in-out;
+  padding: 20px 0;
+  border-bottom: #ccc 1px solid;
 }
 
-section h2 {
-  color: var(--text-color);
-  text-transform: uppercase;
-  margin-bottom: 20px;
+section:last-child {
+  border: none;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-ul li {
-  background: #fff;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: #ccc 1px solid;
-  border-radius: 5px;
+h2 {
+  margin-top: 0;
 }
 
 footer {
-  background: var(--primary-color);
+  background: #333;
   color: #fff;
   text-align: center;
-  padding: 20px;
+  padding: 10px 0;
   margin-top: 20px;
-  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
 
-footer p {
-  margin: 0;
-}
-
-/* Navigation toggle button styles */
+/* Navigation toggle button */
 .nav-toggle {
   display: none;
-  font-size: 2rem;
-  background: none;
-  border: none;
+  background: #0779e4;
   color: #fff;
   padding: 10px;
+  border: none;
   cursor: pointer;
 }
 
-.nav-toggle:focus {
-  outline: none;
+.nav-toggle:hover {
+  background: #0559b2;
 }
 
 @media (max-width: 768px) {
-  header, nav, .container, footer {
-    width: 100%;
-  }
-
   .nav-toggle {
     display: block;
   }
@@ -154,10 +116,9 @@ footer p {
   nav ul {
     display: none;
     flex-direction: column;
-    text-align: left;
   }
 
-  nav.open ul {
+  nav ul.open {
     display: flex;
   }
 
@@ -167,26 +128,14 @@ footer p {
   }
 }
 
-/* New styles for interactive elements and animations */
-a {
-  transition: color 0.3s ease, border 0.3s ease;
+/* Hover effect */
+a.hover, button.hover {
+  color: #fff !important;
+  background-color: #0779e4 !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-a:hover {
-  color: var(--accent-color);
-  border-color: var(--accent-color);
-}
-
-button, .contact-links a {
-  transition: background-color 0.3s ease, border-color 0.3s ease;
-}
-
-button:hover, .contact-links a:hover {
-  background-color: var(--accent-color);
-  border-color: var(--accent-color);
-}
-
-@keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+a.hover:hover, button.hover:hover {
+  background-color: #0559b2 !important;
+  color: #fff !important;
 }
